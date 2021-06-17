@@ -1,10 +1,10 @@
-package net.fabricmc.example.mixin;
+package dbp.torched.mixin;
 
-import net.fabricmc.example.TorchPlacement;
+import dbp.torched.TorchPlacement;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.MiningToolItem;
-import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.AxeItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.util.ActionResult;
 
@@ -12,9 +12,9 @@ import java.util.Set;
 
 import org.spongepowered.asm.mixin.Mixin;
 
-@Mixin(PickaxeItem.class)
-public class ExampleMixin extends MiningToolItem {
-	protected ExampleMixin(float attackDamage, float attackSpeed, ToolMaterial material, Set<Block> effectiveBlocks, Settings settings) {
+@Mixin(AxeItem.class)
+public class AxeMixin extends MiningToolItem {
+	protected AxeMixin(float attackDamage, float attackSpeed, ToolMaterial material, Set<Block> effectiveBlocks, Settings settings) {
 		super(attackDamage, attackSpeed, material, effectiveBlocks, settings);
 	}
 
