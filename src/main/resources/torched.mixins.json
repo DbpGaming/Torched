@@ -2,13 +2,12 @@
   "required": true,
   "minVersion": "0.8",
   "package": "dbp.torched.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "compatibilityLevel": "JAVA_16",
   "mixins": [
   ],
   "client": [
 	"PickaxeMixin",
-	"AxeMixin",
-	"ShovelMixin"
+	"AxeMixin"
   ],
   "injectors": {
     "defaultRequire": 1

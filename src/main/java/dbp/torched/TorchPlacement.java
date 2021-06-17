@@ -21,13 +21,13 @@ public class TorchPlacement {
 		BlockState state = getPlacementState(itemPlacementContext);
 		BlockPos pos = itemPlacementContext.getBlockPos();
 
-		for (int i = 0; i < player.inventory.size(); i++) {
-			if (player.inventory.getStack(i).getItem() == Items.TORCH && state != null) {
+		for (int i = 0; i < player.getInventory().size(); i++) {
+			if (player.getInventory().getStack(i).getItem() == Items.TORCH && state != null) {
 				if (context.getWorld().setBlockState(itemPlacementContext.getBlockPos(), state, 11)) {
 					BlockSoundGroup blockSoundGroup = state.getSoundGroup();
 					world.playSound(player, pos, blockSoundGroup.getPlaceSound(), SoundCategory.BLOCKS, (blockSoundGroup.getVolume() + 1.0F) / 2.0F, blockSoundGroup.getPitch() * 0.8F);
-					if (player == null || !player.abilities.creativeMode) {
-						player.inventory.getStack(i).decrement(1);
+					if (player == null || !player.getAbilities().creativeMode) {
+						player.getInventory().getStack(i).decrement(1);
 					}
 				}
 			}

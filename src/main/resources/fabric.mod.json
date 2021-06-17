@@ -1,32 +1,28 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "torched",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Torched",
+  "description": "Right clicking with tools should place torches!",
   "authors": [
-    "Me!"
+    "Dbp"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://discord.gg/PQBzy7badH",
+    "sources": "https://github.com/DbpGaming/Torched"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "LGPL",
+  "icon": "assets/torched/icon.png",
 
   "environment": "*",
   "mixins": [
-    "modid.mixins.json"
+    "torched.mixins.json"
   ],
 
   "depends": {
     "fabricloader": ">=0.7.4",
-    "fabric": "*",
-    "minecraft": "1.16.x"
-  },
-  "suggests": {
-    "another-mod": "*"
+    "minecraft": "*"
   }
 }
